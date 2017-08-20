@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI); //mongodb://localhost/fullstack-jeopardy
+mongoose.connect(process.env.MONGODB_URI); //mongodb://localhost/cashout-report
 
 const connection = mongoose.connection;
 connection.on('connected', () => {
