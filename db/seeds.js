@@ -30,8 +30,9 @@ User.remove({}, function(error){
   console.log(error);
 });
 
-/* Seeded cash out form data */
+/* Seeded cash out report data */
 const CashOutReportOne = new CashOutReport({
+  name: 'Cash Out Report One',
   charge_sales_plus_tips:       240.00,
   charge_tips:                  40.00,
   charge_sales_less_tips:       200.00,
@@ -48,6 +49,7 @@ const CashOutReportOne = new CashOutReport({
 });
 
 const CashOutReportTwo = new CashOutReport({
+  name: 'Cash Out Report Two',
   charge_sales_plus_tips:       360.00,
   charge_tips:                  60.00,
   charge_sales_less_tips:       300.00,
@@ -64,6 +66,7 @@ const CashOutReportTwo = new CashOutReport({
 });
 
 const CashOutReportThree = new CashOutReport({
+  name: 'Cash Out Report Three',
   charge_sales_plus_tips:      500.00,
   charge_tips:                  100.00,
   charge_sales_less_tips:       400.00,
@@ -79,14 +82,22 @@ const CashOutReportThree = new CashOutReport({
   time_stamp: '2017-08-13T20:40:10:301Z',
 });
 
+const CashOutReportListOne = new CashOutReportList({
+  name: 'Sean\'s Cash Out Report List',
+  cash_out_report: [CashOutReportOne,CashOutReportTwo]
+});
+
+const CashOutReportListTwo = new CashOutReportList({
+  name: 'Sean\'s Cash Out Report List',
+  cash_out_report: [CashOutReportThree,]
+});
 /* Seeded user data */
 
 const Brian = new User ({
   user_name: 'Brian',
   pass_code: '4321',
   admin: false,
-  user_list: [],
-  cash_out_report_list: [],
+  cash_out_report_list: [CashOutReportListTwo],
   time_stamp: '2016-09-26T20:40:10:301Z'
 
 });
@@ -103,42 +114,41 @@ const Sean = new User ({
   user_name: 'Sean',
   pass_code: '0019',
   admin: false,
-  user_list: [],
-  cash_out_report_list: [],
+  cash_out_report_list: [CashOutReportListOne],
   time_stamp: '2016-08-20T20:40:10:201Z'
 });
 
 /* Save seeds */
 
 CashOutReportOne.save( (error)=>{
-  if (error) console.log('Cash Out Form One user' + error);
-  console.log('Cash Out Form One added');
+  if (error) console.log('Cash Out Report One user' + error);
+  console.log('Cash Out Report One added');
 });
 
 CashOutReportTwo.save( (error)=>{
-  if (error) console.log('Cash Out Form Two user' + error);
-  console.log('Cash Out Form Two added');
+  if (error) console.log('Cash Out Report Two user' + error);
+  console.log('Cash Out Report Two added');
 });
 
 CashOutReportThree.save( (error)=>{
-  if (error) console.log('Cash Out Form Three user' + error);
-  console.log('Cash Out Form Three added');
+  if (error) console.log('Cash Out Report Three user' + error);
+  console.log('Cash Out Report Three added');
 });
 
 
 Brian.save( (error)=>{
-  if (error) console.log('Brian user' + error);
-  console.log('Brian added');
+  if (error) console.log('User Brian' + error);
+  console.log('User Brian added');
 });
 
 Gilly.save( (error)=>{
-  if (error) console.log('Gilly user' + error);
-  console.log('Gilly added');
+  if (error) console.log('User Gilly' + error);
+  console.log('User Gilly added');
 });
 
 Sean.save( (error)=>{
-  if (error) console.log('Sean user' + error);
-  console.log('Sean added');
+  if (error) console.log('User Sean' + error);
+  console.log('User Sean added');
 });
 
 

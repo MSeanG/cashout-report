@@ -2,7 +2,10 @@ require("dotenv").config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const UsersController = require('./controllers/users');
+const CashOutReportListController = require('./controllers/cash-out-report-list')
 const app = express();
+
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI); //mongodb://localhost/cashout-report
 
@@ -17,6 +20,7 @@ connection.on('error', (err) => {
 }); 
 
 app.use(bodyParser.json());
+app.use('/api/users', UsersController);
 app.get('/', (req,res) => {
   res.send('Hello world!')
 })
