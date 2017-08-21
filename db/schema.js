@@ -43,7 +43,7 @@ const CashOutReportSchema = new Schema({
 
 const CashOutReportListSchema = new Schema({
   name: String,
-  cash_out_report: [CashOutReportSchema]
+  cash_out_reports: [CashOutReportSchema]
 });
 
 const UserSchema = new Schema({

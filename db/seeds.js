@@ -84,12 +84,12 @@ const CashOutReportThree = new CashOutReport({
 
 const CashOutReportListOne = new CashOutReportList({
   name: 'Sean\'s Cash Out Report List',
-  cash_out_report: [CashOutReportOne,CashOutReportTwo]
+  cash_out_reports: [CashOutReportOne,CashOutReportTwo]
 });
 
 const CashOutReportListTwo = new CashOutReportList({
   name: 'Sean\'s Cash Out Report List',
-  cash_out_report: [CashOutReportThree,]
+  cash_out_reports: [CashOutReportThree,]
 });
 /* Seeded user data */
 
