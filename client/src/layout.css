@@ -1,0 +1,109 @@
+html,body{
+  margin:0;
+  padding:0;
+  height:100%
+}
+#layout{
+  font-size:1.25em;
+  width:100%
+}
+#format{
+  border:0;
+  margin:0 auto;
+  min-width:780px;
+  max-width:80%;
+  text-align:left
+}
+.binder{
+  margin:0 10px;
+  padding:10px;
+  width:100%
+}
+#header{
+  border:0;
+  /*height:32px;*/
+  display:flex;
+  min-width:0;
+  margin: 0 0 10px 0;
+  padding-bottom:8px;
+  padding-top:7px
+}
+#left{
+  width:33%;
+  text-align:left
+}
+#center{
+  width:34%;
+  text-align: center
+}
+#right{
+  width:33%;
+  text-align:right
+}
+#header a{
+  /*line-height:32px;*/
+  margin:0;
+  padding:0 30px;
+  text-decoration: none
+}
+#header a:hover, #header a:active{
+  text-decoration: underline
+}
+
+#format a:hover, #format a:active{
+  text-decoration: underline
+}
+h1{
+  border-bottom: 3px solid;
+  font-size: 2em;
+  margin:0 0 24px 0;
+  padding:15px 0 15px 0;
+}
+h2{
+  /* border-bottom: 1px solid; */
+  font-size: 1.50em;
+  margin:0 0 8px 0;
+  padding:5px 0 5px 0;
+}
+h3{
+  border-bottom: 1px solid;
+  font-size: 1.50em;
+  margin:0 0 8px 0;
+  padding:5px 0 5px 0;
+}
+#verify{
+  padding:10px;
+  margin:0 auto;
+  width: 380px;
+  text-align:center
+}
+.center{
+  margin: 0 auto;
+  text-align: center;
+}
+.normal-list{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+.normal-list li{
+  margin-bottom:10px;
+}
+#new-user{
+  border: 1px solid #CCC;
+  margin: 20px auto 40px;
+  padding:0 16px 16px 16px;
+  width: 50%;
+}
+#new-user legend{
+  /* border-bottom: 1px solid; */
+  font-size: 1.50em;
+  margin:0 0 8px 0;
+  padding:5px 0 5px 0;
+  width:100%;
+  text-align: center;
+}
+#new-user input[type=text]:not(.browser-default),
+#new-user input[type=password]:not(.browser-default) {
+  font-size: 1.25em
+}
