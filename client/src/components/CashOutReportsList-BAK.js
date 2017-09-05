@@ -2,21 +2,19 @@ import React, { Component } from 'react';
 import { /*BrowserRouter as Router, Route,*/ Link } from 'react-router-dom';
 import axios from 'axios';
 
-import NewUserForm from './NewUserForm';
-//import UserList from './UserList';
 
 
-class AdminView extends Component {
+class CashOutReportList extends Component {
   constructor(){
     super();
     this.state = {
-      users: []
+      cash_out_reports: []
     }
   }
 
   componentWillMount(){
     axios.get("/api/users").then((res) => {
-      this.setState({users: res.data});
+      this.setState({cash_out_reports: res.data});
     });
   }
 
@@ -24,16 +22,13 @@ class AdminView extends Component {
     return (
       <div className="center">
 
-         <NewUserForm
-              // addNewProductToProductList={this.props.addNewProductToProductList}/>
-              addNewUserToUserList={this.props.addNewUserToUserList}/>
 
         <h3>User List</h3>
         <ul className="normal-list">
-          {this.state.users.map((user, i) => {
+          {this.state.cash_out_reports.map((report, i) => {
             return (
               <li key={i}>
-                <Link to={`/users/${user._id}`}> {user.user_name}'s Page</Link>
+                <Link to={`/users/${report._id}`}> {report.cash_out_reports}</Link>
               </li>
             );
           })}
@@ -43,4 +38,4 @@ class AdminView extends Component {
   }
 }
 
-export default AdminView;
+export default CashOutReportList;
